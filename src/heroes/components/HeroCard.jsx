@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 const CharactersByHero =({alter_ego,characters})=>{
     //if(alter_ego === characters ) return(<></>);
     //return <p>{characters}</p>
     return (alter_ego === characters )
     ? <></>
-    : <p>{characters}</p>
+    : <p>{characters}</p>;
 }
 
 export const HeroCard = ({
@@ -20,11 +21,11 @@ export const HeroCard = ({
     const heroImageUrl = `/assets/heroes/${ id }.jpg`;
     //const charactersByHero = (<p>{characters}</p>)
     return (
-        <div className="col">
+        <div className="col animate__animated animate__fadeIn">
             <div className="card">
                 <div className="row no-gutters">
                     <div className="col-4">
-                        <img src={ heroImageUrl} className="card-img" alt="{ superhero }" />
+                        <img src={ heroImageUrl } className="card-img" alt="{ superhero }" />
                     </div>
 
                     <div className="col-8">
@@ -41,7 +42,7 @@ export const HeroCard = ({
                                 <small className="text_muted">{first_appearance}</small>
                             </p>
 
-                            <Link to={`./hero/ ${id}`}>
+                            <Link to={`/hero/${id}`}>
                                 Mas...
                             </Link>
                         </div>
