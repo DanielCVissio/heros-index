@@ -4,7 +4,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 export const Navbar = () => {
     const navigate = useNavigate();
 
-    const handleLogout=() =>{
+    const onLogout=() =>{
         nagivage('/login', {
             replace:true
         });
@@ -36,6 +36,13 @@ export const Navbar = () => {
                     >
                         DC
                     </NavLink>
+
+                    <NavLink 
+                        className={ ({isActive})=> `nav-item nav-link ${ isActive ? 'activate' : ''}` }
+                        to="/search"
+                    >
+                        Search
+                    </NavLink>
                 </div>
             </div>
 
@@ -44,7 +51,7 @@ export const Navbar = () => {
                     <span
                         className='nav-item nav-link text-primary'
                     >
-                        Daniel
+                        DanielVissio
                     </span>
 
                     <button
