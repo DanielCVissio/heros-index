@@ -16,15 +16,11 @@ export const AppRouter = () => {
           </PublicRoute>
         }/>
 
-        {/*<Route path="login" element={<LoginPages />} />*/}
-
         <Route path="/*" element={
           <PrivateRoute>
             <HeroesRoutes />
           </PrivateRoute>
         }/>
-
-        {/*<Route path="/*" element={<HeroesRoutes />} /> */}
 
       </Routes>
     </>

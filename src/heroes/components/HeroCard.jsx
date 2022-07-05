@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import 'animate.css';
+//import 'animate.css';
 
 const CharactersByHero =({alter_ego,characters})=>{
     //if(alter_ego === characters ) return(<></>);
